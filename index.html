@@ -10,18 +10,9 @@
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <script type="text/javascript" src="assets/javascript/app.js"></script>
-
+<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
   <style>
-
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-  
-    }
-        
-    /* On small screens, set height to 'auto' for the grid */
-   
-    }
   </style>
-
 </head>
  <body>
   
@@ -36,28 +27,59 @@
         <div class="col-md-3">
         <div id="therules">
         <p><h3>Rocks beats Spritzer, Spritzer beats Paper and Paper takes the Rocks. </h3></p>
+
+       /*<img src="assets/images/rps.jpg" alt="" height="100" width="250">*/
+        
         </div>
         </div>
-          <div class="col-md-2">
-          <div class="game">game area</div>
-          </div>
+         
 
         <div class="col-md-2">
-             <div id="user1Name"> User 1 Name</div>
+        <div classes="choices">
+             <div id="user1name"><h2>Player 1</h2></div>
             <div id="user1Rocks">  On the Rocks</div>
             <div id="user1paper">  In paper</div>
             <div id="user1spritzer">  with Spritzer</div>
             </div>
-        
+            </div>
+         <div class="col-md-2">
+          <div class="game"><h6>You are player 1<h6>
+
+
+          </div></div>
+         
         <div class="col-md-2">
-          <div class="user2name">User 2 Name</div>
+          <div class="choices">
+          <div id="user2name"><h2>Player 2</h2></div>
           <div id="user2Rocks">  On the Rocks</div>
           <div id="user2paper">  In paper</div>
           <div id="user2spritzer">  with Spritzer</div>
-         </div>
         </div>
+         </div>
+         <div class="col-md-2">
+         
+ <input type="text" name="firstname" value="Player name">
+<input type="submit" value="Submit">
+ <div class="talk">Messaging
+
+<!-- CHAT MARKUP -->
+
+
+<input type="text" name="messaging" value="message">
+    <div class='example-chat-toolbar'>
+    <label for="nameInput">Username:</label>
+    <input type='text' id='nameInput' placeholder='enter a username...'>
+  </div>
+
+  <ul id='example-messages' class="example-chat-messages"></ul>
+
+  <footer>
+    <input type='text' id='messageInput'  placeholder='Type a message...'>
+  </footer>
 </div>
- <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./Grid Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
- 
+
+</div>
+
+</div>
+
 </body></html>
