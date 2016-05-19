@@ -14,6 +14,28 @@ var user2wins = 0;
 var user1losses = 0;
 var user2losses = 0;
 
+ //var players = 
+//{
+ // user1:
+  
+   // {
+     //   name: user1name,
+       // choice: user1choice,
+       // wins: user1wins,
+       // loses: user1losses,
+   // },
+  
+
+  //user2:
+ 
+   // {
+     //   name: user2name,
+      //  choice: user2choice,
+       // wins: user2wins,
+      //  loses: user2losses,
+   // }
+ 
+//}
 
 
 
@@ -22,7 +44,7 @@ var user2losses = 0;
 
 $("#adduser").on("click", function(){
   
-  var players = 
+ var players = 
 {
   user1:
   
@@ -81,19 +103,54 @@ ontherocks.on("value", function(snapshot) {
 }, function(errorObject){
 
  console.log("The read failed: " + errorObject.code)
- })
-
-//function choiceselection()
-
-//$("#players").on("click", function(){
+ });
 
 
-$()
-user1choice = $("#player-name").val().trim();
-
-user1Rocks
-user1paper
-user1spritzer
-  
-}) 
+$("#user1rocks").on("click", function(){
+if (user1choice == "")
+user1choice = "on the Rocks"
 });
+
+$("#user1paper").on("click", function(){
+if (user1choice == "")
+user1choice = "In paper"
+});
+
+$("#user1spritzer").on("click", function(){
+if (user1choice == "")
+user1choice = "with Spritzer"
+});
+
+$("#user2rocks").on("click", function(){
+if (user1choice == "")
+user2choice = "on the Rocks"
+});
+
+$("#user2paper").on("click", function(){
+if (user1choice == "")
+user2choice = "in Paper"
+});
+
+$("#user2spritzer").on("click", function(){
+user2choice = "with Spritzer"
+//ontherocks.set(players);
+ontherocks.on("value", function(snapshot) {
+// Log everything that's coming out of snapshot
+ console.log(snapshot.val());
+  console.log(snapshot.val().user1);
+  console.log(snapshot.val().user2.choice);
+  // Change the HTML to reflect
+  $("#choices2").val("");
+$("#choices2").html(snapshot.val().user2.choice + "with sprtizer")
+  return false;
+// Handle the errors
+}, function(errorObject){
+
+ console.log("The read failed: " + errorObject.code)
+ });
+
+
+});
+
+});  
+

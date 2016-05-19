@@ -8,7 +8,7 @@
 }
 .game{
         margin:0px;
-: url('../images/rps.jpg');
+
 height:100px;
 width:150px;
 background-color: black;
@@ -63,7 +63,12 @@ body {
    background-size:80%;
    
  }
-#choices:hover { 
+#choices1:hover { 
+background-color: ;
+color: red;
+font-size: 25px;
+}
+#choices2:hover { 
 background-color: ;
 color: red;
 font-size: 25px;
