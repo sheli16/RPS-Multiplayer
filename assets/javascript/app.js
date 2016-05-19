@@ -5,6 +5,23 @@ console.log("ready!");
 var ontherocks = new Firebase('https://game-rps.firebaseio.com'); 
 console.log("we made it this far!")
 
+var user1name = "";
+var user2name = "";
+
+$("#adduser").on("click", function(){
+
+//var user1name = $("#nameinput").val().trim();
+if (user1name == ""){
+ user1name = $("#player-name").val().trim();
+ontherocks.push(players);
+}
+else
+{
+ user2name = $("#player-name").val().trim();
+ontherocks.push(players);
+}//});
+//ontherocks.push(players);
+
 //Game players 
 var players = 
 {
@@ -29,19 +46,14 @@ var players =
   ]
 }
 
-console.log(players.user2);
-ontherocks.push(players);
+//console.log(players);
+console.log(user1name);
+console.log(user2name + "second name");
+//console.log(players.user2);
 
-
-$("#submit").on("click", function(){
-//var user1name = $("#nameinput").val().trim();
-if (user1name === "")
-  user1name = $("#nameInput").val().trim();
-
-if (user1name == "")
-  user2name = $("#nameInput").val().trim();
-});
-console.log(players);
 ontherocks.update(players);
+// Prevents moving to new page
+ return false;
+});
 
 });
