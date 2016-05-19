@@ -5,33 +5,47 @@ console.log("ready!");
 var messagesRef = new Firebase('https://game-rps.firebaseio.com'); 
 console.log("we made it this far!")
 //Creating needed variables
-  var i = 0
-
-  var User1 = {
-  name: 
-  choice:
-  wins:
-  loses:
-}
   
-  var user2 = {
-  name:
-  choice:
-  wins:
-  loses:
+var players = 
+{
+  user1:
+  [
+    {
+        name: user1name,
+        choice: user1choice,
+        wins: user1wins,
+        loses: user1losses,
+    },
+  ]
+
+  user2:
+  [
+    {
+        name: user2name,
+        choice: user1choice,
+        wins: user1wins,
+        loses: user1losses,
+    }
+  ]
 }
- 
+
+Console.log(players.user2.user2name)
+
 
 $(".submit").on("click", function(){
 
    // Grabs user input
-   var user1Name = $("#nameInput").val().trim();
-   var user2Name = $("#nameinput").val().trim();
+   var user1name = $("#nameinput").val().trim();
+   var user2name = $("#nameinput").val().trim();
 
-   if user2name
-   
+  var i = 0
 
-
+  
+}
+  
+ 
+}
+ 
    var user2rocks = $("#user2rocks").val().trim();
    var user2paper = moment($("#user2paper").val().trim();
    var user2spritzer = $("#user2spritzer").val().trim();
